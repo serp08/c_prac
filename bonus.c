@@ -21,16 +21,17 @@ int main(){
     struct Employee *ppl = calloc(0, sizeof(struct Employee));
     addEmployee(ppl, &numEmployees);
     // updateEmployee(ppl, numEmployees);
-    addEmployee(ppl, &numEmployees);
-    struct Employee a[2];
-    sortEmployeesByPerformance((struct Employee*) a, ppl, numEmployees);
-    printf("%s", a[0].dept);
+    // addEmployee(ppl, &numEmployees);
+    // struct Employee a[2];
+    // sortEmployeesByPerformance((struct Employee*) a, ppl, numEmployees);
+    printf("%s", ppl[0].dept);
     free(ppl);
     return 0;
 }
 
 void addEmployee(struct Employee *list, int *numEmployees){
     (*numEmployees)++;
+    printf("%d", *numEmployees);
     struct Employee e;
     printf("Enter employee name: ");
     scanf("%s", &e.name);
